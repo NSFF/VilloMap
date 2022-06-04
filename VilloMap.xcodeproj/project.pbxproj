@@ -1,0 +1,609 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BEA18BC1284BC5FA00F70A30 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA18BC0284BC5FA00F70A30 /* AppDelegate.swift */; };
+		BEA18BC3284BC5FA00F70A30 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA18BC2284BC5FA00F70A30 /* SceneDelegate.swift */; };
+		BEA18BC5284BC5FA00F70A30 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA18BC4284BC5FA00F70A30 /* ViewController.swift */; };
+		BEA18BC8284BC5FA00F70A30 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEA18BC6284BC5FA00F70A30 /* Main.storyboard */; };
+		BEA18BCB284BC5FA00F70A30 /* VilloMap.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BEA18BC9284BC5FA00F70A30 /* VilloMap.xcdatamodeld */; };
+		BEA18BCD284BC5FC00F70A30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEA18BCC284BC5FC00F70A30 /* Assets.xcassets */; };
+		BEA18BD0284BC5FC00F70A30 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEA18BCE284BC5FC00F70A30 /* LaunchScreen.storyboard */; };
+		BEA18BDB284BC5FD00F70A30 /* VilloMapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA18BDA284BC5FD00F70A30 /* VilloMapTests.swift */; };
+		BEA18BE6284BC5FD00F70A30 /* VilloMapUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA18BE5284BC5FD00F70A30 /* VilloMapUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BEA18BD7284BC5FD00F70A30 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BEA18BB5284BC5FA00F70A30 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BEA18BBC284BC5FA00F70A30;
+			remoteInfo = VilloMap;
+		};
+		BEA18BE2284BC5FD00F70A30 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BEA18BB5284BC5FA00F70A30 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BEA18BBC284BC5FA00F70A30;
+			remoteInfo = VilloMap;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BEA18BBD284BC5FA00F70A30 /* VilloMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VilloMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BEA18BC0284BC5FA00F70A30 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BEA18BC2284BC5FA00F70A30 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		BEA18BC4284BC5FA00F70A30 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BEA18BC7284BC5FA00F70A30 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BEA18BCA284BC5FA00F70A30 /* VilloMap.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = VilloMap.xcdatamodel; sourceTree = "<group>"; };
+		BEA18BCC284BC5FC00F70A30 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BEA18BCF284BC5FC00F70A30 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BEA18BD1284BC5FC00F70A30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BEA18BD6284BC5FD00F70A30 /* VilloMapTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VilloMapTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BEA18BDA284BC5FD00F70A30 /* VilloMapTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VilloMapTests.swift; sourceTree = "<group>"; };
+		BEA18BDC284BC5FD00F70A30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BEA18BE1284BC5FD00F70A30 /* VilloMapUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VilloMapUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BEA18BE5284BC5FD00F70A30 /* VilloMapUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VilloMapUITests.swift; sourceTree = "<group>"; };
+		BEA18BE7284BC5FD00F70A30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BEA18BBA284BC5FA00F70A30 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BEA18BD3284BC5FD00F70A30 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BEA18BDE284BC5FD00F70A30 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BEA18BB4284BC5FA00F70A30 = {
+			isa = PBXGroup;
+			children = (
+				BEA18BBF284BC5FA00F70A30 /* VilloMap */,
+				BEA18BD9284BC5FD00F70A30 /* VilloMapTests */,
+				BEA18BE4284BC5FD00F70A30 /* VilloMapUITests */,
+				BEA18BBE284BC5FA00F70A30 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BEA18BBE284BC5FA00F70A30 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BEA18BBD284BC5FA00F70A30 /* VilloMap.app */,
+				BEA18BD6284BC5FD00F70A30 /* VilloMapTests.xctest */,
+				BEA18BE1284BC5FD00F70A30 /* VilloMapUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BEA18BBF284BC5FA00F70A30 /* VilloMap */ = {
+			isa = PBXGroup;
+			children = (
+				BEA18BC0284BC5FA00F70A30 /* AppDelegate.swift */,
+				BEA18BC2284BC5FA00F70A30 /* SceneDelegate.swift */,
+				BEA18BC4284BC5FA00F70A30 /* ViewController.swift */,
+				BEA18BC6284BC5FA00F70A30 /* Main.storyboard */,
+				BEA18BCC284BC5FC00F70A30 /* Assets.xcassets */,
+				BEA18BCE284BC5FC00F70A30 /* LaunchScreen.storyboard */,
+				BEA18BD1284BC5FC00F70A30 /* Info.plist */,
+				BEA18BC9284BC5FA00F70A30 /* VilloMap.xcdatamodeld */,
+			);
+			path = VilloMap;
+			sourceTree = "<group>";
+		};
+		BEA18BD9284BC5FD00F70A30 /* VilloMapTests */ = {
+			isa = PBXGroup;
+			children = (
+				BEA18BDA284BC5FD00F70A30 /* VilloMapTests.swift */,
+				BEA18BDC284BC5FD00F70A30 /* Info.plist */,
+			);
+			path = VilloMapTests;
+			sourceTree = "<group>";
+		};
+		BEA18BE4284BC5FD00F70A30 /* VilloMapUITests */ = {
+			isa = PBXGroup;
+			children = (
+				BEA18BE5284BC5FD00F70A30 /* VilloMapUITests.swift */,
+				BEA18BE7284BC5FD00F70A30 /* Info.plist */,
+			);
+			path = VilloMapUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BEA18BBC284BC5FA00F70A30 /* VilloMap */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BEA18BEA284BC5FD00F70A30 /* Build configuration list for PBXNativeTarget "VilloMap" */;
+			buildPhases = (
+				BEA18BB9284BC5FA00F70A30 /* Sources */,
+				BEA18BBA284BC5FA00F70A30 /* Frameworks */,
+				BEA18BBB284BC5FA00F70A30 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VilloMap;
+			productName = VilloMap;
+			productReference = BEA18BBD284BC5FA00F70A30 /* VilloMap.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BEA18BD5284BC5FD00F70A30 /* VilloMapTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BEA18BED284BC5FD00F70A30 /* Build configuration list for PBXNativeTarget "VilloMapTests" */;
+			buildPhases = (
+				BEA18BD2284BC5FD00F70A30 /* Sources */,
+				BEA18BD3284BC5FD00F70A30 /* Frameworks */,
+				BEA18BD4284BC5FD00F70A30 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BEA18BD8284BC5FD00F70A30 /* PBXTargetDependency */,
+			);
+			name = VilloMapTests;
+			productName = VilloMapTests;
+			productReference = BEA18BD6284BC5FD00F70A30 /* VilloMapTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BEA18BE0284BC5FD00F70A30 /* VilloMapUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BEA18BF0284BC5FD00F70A30 /* Build configuration list for PBXNativeTarget "VilloMapUITests" */;
+			buildPhases = (
+				BEA18BDD284BC5FD00F70A30 /* Sources */,
+				BEA18BDE284BC5FD00F70A30 /* Frameworks */,
+				BEA18BDF284BC5FD00F70A30 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BEA18BE3284BC5FD00F70A30 /* PBXTargetDependency */,
+			);
+			name = VilloMapUITests;
+			productName = VilloMapUITests;
+			productReference = BEA18BE1284BC5FD00F70A30 /* VilloMapUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BEA18BB5284BC5FA00F70A30 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					BEA18BBC284BC5FA00F70A30 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					BEA18BD5284BC5FD00F70A30 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = BEA18BBC284BC5FA00F70A30;
+					};
+					BEA18BE0284BC5FD00F70A30 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = BEA18BBC284BC5FA00F70A30;
+					};
+				};
+			};
+			buildConfigurationList = BEA18BB8284BC5FA00F70A30 /* Build configuration list for PBXProject "VilloMap" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BEA18BB4284BC5FA00F70A30;
+			productRefGroup = BEA18BBE284BC5FA00F70A30 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BEA18BBC284BC5FA00F70A30 /* VilloMap */,
+				BEA18BD5284BC5FD00F70A30 /* VilloMapTests */,
+				BEA18BE0284BC5FD00F70A30 /* VilloMapUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BEA18BBB284BC5FA00F70A30 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BEA18BD0284BC5FC00F70A30 /* LaunchScreen.storyboard in Resources */,
+				BEA18BCD284BC5FC00F70A30 /* Assets.xcassets in Resources */,
+				BEA18BC8284BC5FA00F70A30 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BEA18BD4284BC5FD00F70A30 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BEA18BDF284BC5FD00F70A30 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BEA18BB9284BC5FA00F70A30 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BEA18BC5284BC5FA00F70A30 /* ViewController.swift in Sources */,
+				BEA18BCB284BC5FA00F70A30 /* VilloMap.xcdatamodeld in Sources */,
+				BEA18BC1284BC5FA00F70A30 /* AppDelegate.swift in Sources */,
+				BEA18BC3284BC5FA00F70A30 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BEA18BD2284BC5FD00F70A30 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BEA18BDB284BC5FD00F70A30 /* VilloMapTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BEA18BDD284BC5FD00F70A30 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BEA18BE6284BC5FD00F70A30 /* VilloMapUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BEA18BD8284BC5FD00F70A30 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BEA18BBC284BC5FA00F70A30 /* VilloMap */;
+			targetProxy = BEA18BD7284BC5FD00F70A30 /* PBXContainerItemProxy */;
+		};
+		BEA18BE3284BC5FD00F70A30 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BEA18BBC284BC5FA00F70A30 /* VilloMap */;
+			targetProxy = BEA18BE2284BC5FD00F70A30 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BEA18BC6284BC5FA00F70A30 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BEA18BC7284BC5FA00F70A30 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BEA18BCE284BC5FC00F70A30 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BEA18BCF284BC5FC00F70A30 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BEA18BE8284BC5FD00F70A30 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BEA18BE9284BC5FD00F70A30 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BEA18BEB284BC5FD00F70A30 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = VilloMap/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ehb.VilloMap;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BEA18BEC284BC5FD00F70A30 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = VilloMap/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ehb.VilloMap;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		BEA18BEE284BC5FD00F70A30 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = VilloMapTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ehb.VilloMapTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VilloMap.app/VilloMap";
+			};
+			name = Debug;
+		};
+		BEA18BEF284BC5FD00F70A30 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = VilloMapTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ehb.VilloMapTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VilloMap.app/VilloMap";
+			};
+			name = Release;
+		};
+		BEA18BF1284BC5FD00F70A30 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = VilloMapUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ehb.VilloMapUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = VilloMap;
+			};
+			name = Debug;
+		};
+		BEA18BF2284BC5FD00F70A30 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = VilloMapUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ehb.VilloMapUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = VilloMap;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BEA18BB8284BC5FA00F70A30 /* Build configuration list for PBXProject "VilloMap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BEA18BE8284BC5FD00F70A30 /* Debug */,
+				BEA18BE9284BC5FD00F70A30 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BEA18BEA284BC5FD00F70A30 /* Build configuration list for PBXNativeTarget "VilloMap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BEA18BEB284BC5FD00F70A30 /* Debug */,
+				BEA18BEC284BC5FD00F70A30 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BEA18BED284BC5FD00F70A30 /* Build configuration list for PBXNativeTarget "VilloMapTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BEA18BEE284BC5FD00F70A30 /* Debug */,
+				BEA18BEF284BC5FD00F70A30 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BEA18BF0284BC5FD00F70A30 /* Build configuration list for PBXNativeTarget "VilloMapUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BEA18BF1284BC5FD00F70A30 /* Debug */,
+				BEA18BF2284BC5FD00F70A30 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		BEA18BC9284BC5FA00F70A30 /* VilloMap.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				BEA18BCA284BC5FA00F70A30 /* VilloMap.xcdatamodel */,
+			);
+			currentVersion = BEA18BCA284BC5FA00F70A30 /* VilloMap.xcdatamodel */;
+			path = VilloMap.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = BEA18BB5284BC5FA00F70A30 /* Project object */;
+}
