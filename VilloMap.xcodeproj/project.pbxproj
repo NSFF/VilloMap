@@ -101,14 +101,12 @@
 		BEA18BBF284BC5FA00F70A30 /* VilloMap */ = {
 			isa = PBXGroup;
 			children = (
-				BEA18BC0284BC5FA00F70A30 /* AppDelegate.swift */,
-				BEA18BC2284BC5FA00F70A30 /* SceneDelegate.swift */,
-				BEA18BC4284BC5FA00F70A30 /* ViewController.swift */,
-				BEA18BC6284BC5FA00F70A30 /* Main.storyboard */,
+				BEA18BFC284BC6E700F70A30 /* StoryBoards */,
+				BEA18BF8284BC69000F70A30 /* Delegates */,
+				BEA18BF7284BC67B00F70A30 /* Model */,
+				BEA18BF6284BC66A00F70A30 /* ViewControllers */,
 				BEA18BCC284BC5FC00F70A30 /* Assets.xcassets */,
-				BEA18BCE284BC5FC00F70A30 /* LaunchScreen.storyboard */,
 				BEA18BD1284BC5FC00F70A30 /* Info.plist */,
-				BEA18BC9284BC5FA00F70A30 /* VilloMap.xcdatamodeld */,
 			);
 			path = VilloMap;
 			sourceTree = "<group>";
@@ -129,6 +127,40 @@
 				BEA18BE7284BC5FD00F70A30 /* Info.plist */,
 			);
 			path = VilloMapUITests;
+			sourceTree = "<group>";
+		};
+		BEA18BF6284BC66A00F70A30 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				BEA18BC4284BC5FA00F70A30 /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		BEA18BF7284BC67B00F70A30 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BEA18BC9284BC5FA00F70A30 /* VilloMap.xcdatamodeld */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BEA18BF8284BC69000F70A30 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				BEA18BC0284BC5FA00F70A30 /* AppDelegate.swift */,
+				BEA18BC2284BC5FA00F70A30 /* SceneDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		BEA18BFC284BC6E700F70A30 /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				BEA18BCE284BC5FC00F70A30 /* LaunchScreen.storyboard */,
+				BEA18BC6284BC5FA00F70A30 /* Main.storyboard */,
+			);
+			path = StoryBoards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
