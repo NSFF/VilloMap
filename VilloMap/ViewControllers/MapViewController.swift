@@ -41,13 +41,11 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
             
             if let jsonData = data
             {
-                let decoder = JSONDecoder()
-
                 do {
                     /*self.hondentoiletten = try decoder.decode([Hondentoilet].self, from: jsonData)
                    */
-                    
-                    self.translateData(responseData: jsonData)
+                    let villoData = try! JSONDecoder().decode(VilloDataStruct.self, from: jsonData)
+                    //self.translateData(responseData: jsonData)
                     
                 } catch {
                     print(error.localizedDescription)
@@ -62,7 +60,14 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     
     func translateData(responseData:Data)
     {
-        let json = try! JSONSerialization.jsonObject(with: responseData, options: []) as? [String: AnyObject]
+        //let json = try! JSONSerialization.jsonObject(with: responseData, options: []) as? [String: AnyObject]
+        //print(json)
+        
+        
+        //let villoData = try! JSONDecoder().decode(VilloDataStruct.self, from: responseData)
+        
+        //print(villoData.features[0].properties.status)
+        
         
         //let list = json!["features"] as! [AnyObject]
         //let bbox = list.forEach{print($0)}
