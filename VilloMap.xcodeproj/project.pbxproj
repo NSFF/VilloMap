@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		BEA18BC1284BC5FA00F70A30 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA18BC0284BC5FA00F70A30 /* AppDelegate.swift */; };
 		BEA18BC3284BC5FA00F70A30 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA18BC2284BC5FA00F70A30 /* SceneDelegate.swift */; };
-		BEA18BC5284BC5FA00F70A30 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA18BC4284BC5FA00F70A30 /* ViewController.swift */; };
+		BEA18BC5284BC5FA00F70A30 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA18BC4284BC5FA00F70A30 /* MapViewController.swift */; };
 		BEA18BC8284BC5FA00F70A30 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEA18BC6284BC5FA00F70A30 /* Main.storyboard */; };
 		BEA18BCB284BC5FA00F70A30 /* VilloMap.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BEA18BC9284BC5FA00F70A30 /* VilloMap.xcdatamodeld */; };
 		BEA18BCD284BC5FC00F70A30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEA18BCC284BC5FC00F70A30 /* Assets.xcassets */; };
@@ -39,7 +39,7 @@
 		BEA18BBD284BC5FA00F70A30 /* VilloMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VilloMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEA18BC0284BC5FA00F70A30 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BEA18BC2284BC5FA00F70A30 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		BEA18BC4284BC5FA00F70A30 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BEA18BC4284BC5FA00F70A30 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		BEA18BC7284BC5FA00F70A30 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BEA18BCA284BC5FA00F70A30 /* VilloMap.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = VilloMap.xcdatamodel; sourceTree = "<group>"; };
 		BEA18BCC284BC5FC00F70A30 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -132,7 +132,7 @@
 		BEA18BF6284BC66A00F70A30 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				BEA18BC4284BC5FA00F70A30 /* ViewController.swift */,
+				BEA18BC4284BC5FA00F70A30 /* MapViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -293,7 +293,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BEA18BC5284BC5FA00F70A30 /* ViewController.swift in Sources */,
+				BEA18BC5284BC5FA00F70A30 /* MapViewController.swift in Sources */,
 				BEA18BCB284BC5FA00F70A30 /* VilloMap.xcdatamodeld in Sources */,
 				BEA18BC1284BC5FA00F70A30 /* AppDelegate.swift in Sources */,
 				BEA18BC3284BC5FA00F70A30 /* SceneDelegate.swift in Sources */,
