@@ -2,14 +2,12 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>VilloMap would like to ask for your location while using the app.</string>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string></string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>VilloMap would like to ask for your location while using the app.</string>
 	<key>CFBundleIdentifier</key>
 	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 	<key>CFBundleInfoDictionaryVersion</key>
@@ -30,6 +28,8 @@
 		<false/>
 		<key>NSExceptionDomains</key>
 		<dict>
+			<key>https://data.mobility.brussels/geoserver/bm_bike/wfs?service=wfs&amp;version=1.1.0&amp;request=GetFeature&amp;typeName=bm_bike:villo&amp;outputFormat=json&amp;srsName=EPSG:4326</key>
+			<string></string>
 			<key>https://data.mobility.brussels/nl/info/villo/</key>
 			<string></string>
 		</dict>
