@@ -20,3 +20,5 @@ This project was an assignment given by the Erasmus university college Brussels,
 
 # References
 I used several tutorials to help me during this project:
+
+* Json decoding/Encoding + Codable tutorial: https://www.hackingwithswift.com/articles/119/codable-cheat-sheet
