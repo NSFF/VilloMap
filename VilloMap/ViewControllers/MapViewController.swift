@@ -8,6 +8,7 @@
 import CoreLocation
 import MapKit
 import UIKit
+import CoreData
 
 class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
     
@@ -16,6 +17,10 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     var locationManager = CLLocationManager()
     
     var villoData:VilloDataStruct?
+    
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    
+    var villoMap: [VilloMap] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +35,6 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         }
         
         getDataFromWebservice()
-        
     }
     
     // Code heavily inspired by course material "hondentoiletten" made by Johan Van Den Broek
@@ -43,90 +47,51 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
             {
                 do {
                     self.villoData = try JSONDecoder().decode(VilloDataStruct.self, from: jsonData)
-                    //self.translateData(responseData: jsonData)
-                    
                 } catch {
                     print(error.localizedDescription)
                 }
             }
             DispatchQueue.main.async {
                 self.addAnnotations()
+                self.persistData()
+                self.fetchLocalData()
+                print(self.villoMap.count)
             }
         }
         task.resume()
     }
     
-    func translateData(responseData:Data)
-    {
-        //let json = try! JSONSerialization.jsonObject(with: responseData, options: []) as? [String: AnyObject]
-        //print(json)
+    func persistData() -> Void {
         
-        
-        //let villoData = try! JSONDecoder().decode(VilloDataStruct.self, from: responseData)
-        
-        //print(villoData.features[0].properties.status)
-        
-        
-        //let list = json!["features"] as! [AnyObject]
-        //let bbox = list.forEach{print($0)}
-        //let bbox = list[0]
-        //print(bbox)
-        /*let today = Date()
-        var date1 = Date()
-        var dayCounter = 0
-     
-        var newDay = false
-        var iconURLS = [String]()
-        for counter in 0...list.count-1{
-            let items = list[counter] as! [String: AnyObject]
-            var date2 = Date()
+        for bicycle in self.villoData!.features{
+            let villoMap = VilloMap(context: context) // Link VilloMap data model & Context
             
-            if  let timeResult = (items["dt"] as? Double) {
-                date2 = Date(timeIntervalSince1970: timeResult)
-            }
+            villoMap.latitude = bicycle.geometry.coordinates[1]
+            villoMap.longitude = bicycle.geometry.coordinates[0]
+            villoMap.lastWebUpdate = self.villoData!.timeStamp
+            villoMap.lastLocalUpdate = Date()
+            villoMap.municipality = bicycle.properties.mu_nl
+            villoMap.street = bicycle.properties.address_nl
+            villoMap.status = bicycle.properties.status
             
-            
-            if Calendar.current.compare(date1, to: date2, toGranularity: .day) != ComparisonResult.orderedSame {
-                if (newDay){
-                    dayCounter += 1
-                }
-                newDay = true
-            }
-            if dayCounter == 3 {
-                return
-            }
-            if Calendar.current.compare(today, to: date2, toGranularity: .day) != ComparisonResult.orderedSame
-            {
-                let main = items["main"] as! [String: AnyObject]
-                
-                let temp = main["temp"] as! Double
-                let tempMin = main["temp_min"] as! Double
-                let tempMax = main["temp_max"] as! Double
-                let weatherArray = items["weather"] as! [AnyObject]
-                let weather = weatherArray[0] as! [String: AnyObject]
-                let icon = weather["icon"] as! String
-                let iconURL = URL(string: "http://openweathermap.org/img/w/\(icon).png")
-                if !iconURLS.contains(icon) {
-                    WeatherInfoSingleton.shared.downloadImage(url: URL(string: iconURL!.absoluteString)!)
-                }
-               iconURLS.append(icon)
-                WeatherInfoSingleton.shared.weatherInfos.append([WeatherInfo]())
-                WeatherInfoSingleton.shared.weatherInfos[dayCounter].append(WeatherInfo(date: date2, temp: temp, tempMin: tempMin, tempMax: tempMax, icon: iconURL!.absoluteString))
-                
-            }
-            
-           
-            
-            date1 = date2
-        }*/
-        
+            // Save the data to coredata
+            (UIApplication.shared.delegate as! AppDelegate).saveContext()
+        }
+    }
+    
+    func fetchLocalData() {
+        do {
+            villoMap = try context.fetch(VilloMap.fetchRequest())
+        } catch {
+            print("Fetching Failed")
+        }
     }
 
     func addAnnotations() -> Void {
         var annotations = [MKAnnotation]()
 
-        for bicycle in self.villoData!.features
-        {
+        for bicycle in self.villoData!.features {
+            
             let annotation = MKPointAnnotation()
             annotation.coordinate.latitude = bicycle.geometry.coordinates[1]
             annotation.coordinate.longitude = bicycle.geometry.coordinates[0]
