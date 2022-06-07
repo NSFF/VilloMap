@@ -151,6 +151,10 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         self.mapView.removeAnnotations(allAnnotations)
     }
     
+    @IBAction func RefreshData(_ sender: Any) {
+        self.getDataFromWebservice()
+    }
+    
     
     // show user location
     func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {
