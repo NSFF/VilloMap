@@ -53,6 +53,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
             }
             DispatchQueue.main.async {
                 self.addAnnotations()
+                self.deleteAllLocalData()
                 self.persistData()
                 self.fetchLocalData()
                 print(self.villoMap.count)
@@ -79,12 +80,34 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         }
     }
     
-    func fetchLocalData() {
+    func fetchLocalData() -> Void {
         do {
             villoMap = try context.fetch(VilloMap.fetchRequest())
         } catch {
             print("Fetching Failed")
         }
+    }
+    
+    func deleteAllLocalData() -> Void {
+        /*self.villoMap.forEach{
+            context.delete($0)
+            try! context.save()
+        }*/
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName:
+        "VilloMap")
+        
+        let batchDeleteRequest = NSBatchDeleteRequest(fetchRequest:
+        fetchRequest)
+        
+        batchDeleteRequest.resultType = .resultTypeObjectIDs
+        
+        let result = try! context.execute(batchDeleteRequest) as!
+        NSBatchDeleteResult
+        
+        let changes: [AnyHashable: Any] = [NSDeletedObjectsKey: result.result as! [NSManagedObjectID]]
+        
+        NSManagedObjectContext.mergeChanges(fromRemoteContextSave: changes,
+        into: [context])
     }
 
     func addAnnotations() -> Void {
