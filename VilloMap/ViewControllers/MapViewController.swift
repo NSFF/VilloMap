@@ -122,11 +122,14 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
 
         for bicycle in self.villoData!.features {
             
-            let annotation = MKPointAnnotation()
-            annotation.coordinate.latitude = bicycle.geometry.coordinates[1]
-            annotation.coordinate.longitude = bicycle.geometry.coordinates[0]
-            annotation.title = bicycle.properties.mu_nl
-            annotations.append(annotation)
+            if(bicycle.properties.status == "OPEN"){
+                let annotation = MKPointAnnotation()
+                annotation.coordinate.latitude = bicycle.geometry.coordinates[1]
+                annotation.coordinate.longitude = bicycle.geometry.coordinates[0]
+                annotation.title = bicycle.properties.mu_nl
+                annotation.subtitle = bicycle.properties.address_nl
+                annotations.append(annotation)
+            }
         }
         mapView.addAnnotations(annotations)
         
@@ -136,12 +139,14 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         var annotations = [MKAnnotation]()
 
         for bicycle in self.villoMap {
-            
-            let annotation = MKPointAnnotation()
-            annotation.coordinate.latitude = bicycle.latitude
-            annotation.coordinate.longitude = bicycle.longitude
-            annotation.title = bicycle.municipality
-            annotations.append(annotation)
+            if (bicycle.status == "OPEN"){
+                let annotation = MKPointAnnotation()
+                annotation.coordinate.latitude = bicycle.latitude
+                annotation.coordinate.longitude = bicycle.longitude
+                annotation.title = bicycle.municipality!
+                annotation.subtitle = bicycle.street!
+                annotations.append(annotation)
+            }
         }
         mapView.addAnnotations(annotations)
     }
@@ -163,6 +168,13 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         
         mapView.setRegion(region, animated: true)
     }
+    
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+        
+        view.canShowCallout = true
+        let btn = UIButton(type: .detailDisclosure)
+        view.rightCalloutAccessoryView = btn
+        }
     
 
 }
