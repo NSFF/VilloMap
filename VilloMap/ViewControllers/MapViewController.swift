@@ -33,7 +33,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         
     }
     
-
+    // Code heavily inspired by course material "hondentoiletten" made by Johan Van Den Broek
     func getDataFromWebservice() -> Void {
         let url = URL(string: "https://data.mobility.brussels/geoserver/bm_bike/wfs?service=wfs&version=1.1.0&request=GetFeature&typeName=bm_bike:villo&outputFormat=json&srsName=EPSG:4326")!
         let task = URLSession.shared.dataTask(with: url) {

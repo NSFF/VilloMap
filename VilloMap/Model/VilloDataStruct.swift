@@ -12,7 +12,6 @@ struct VilloDataStruct : Codable {
     let features: [FeatureEle]
 }
 struct FeatureEle : Codable {
-    let bbox: Array<Double>
     let geometry: GeometryEle
     let properties: PropertiesEle
     
