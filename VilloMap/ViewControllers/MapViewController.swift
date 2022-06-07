@@ -33,12 +33,20 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         if CLLocationManager.locationServicesEnabled(){
             locationManager.startUpdatingLocation()
         }
-        
         getDataFromWebservice()
     }
     
     // Code heavily inspired by course material "hondentoiletten" made by Johan Van Den Broek
     func getDataFromWebservice() -> Void {
+        self.fetchLocalData()
+        
+        // if we already have data in core, use that instead of fetching it
+        if self.villoMap.count != 0{
+            self.addAnnotationsFromCoreData()
+            
+            return
+        }
+        
         let url = URL(string: "https://data.mobility.brussels/geoserver/bm_bike/wfs?service=wfs&version=1.1.0&request=GetFeature&typeName=bm_bike:villo&outputFormat=json&srsName=EPSG:4326")!
         let task = URLSession.shared.dataTask(with: url) {
         (data: Data?, response: URLResponse?, error: Error?) -> Void in
@@ -53,10 +61,8 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
             }
             DispatchQueue.main.async {
                 self.addAnnotations()
-                self.deleteAllLocalData()
+                //self.deleteAllLocalData()
                 self.persistData()
-                self.fetchLocalData()
-                print(self.villoMap.count)
             }
         }
         task.resume()
@@ -89,10 +95,6 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     }
     
     func deleteAllLocalData() -> Void {
-        /*self.villoMap.forEach{
-            context.delete($0)
-            try! context.save()
-        }*/
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName:
         "VilloMap")
         
@@ -123,6 +125,20 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         }
         mapView.addAnnotations(annotations)
         
+    }
+    
+    func addAnnotationsFromCoreData() -> Void  {
+        var annotations = [MKAnnotation]()
+
+        for bicycle in self.villoMap {
+            
+            let annotation = MKPointAnnotation()
+            annotation.coordinate.latitude = bicycle.latitude
+            annotation.coordinate.longitude = bicycle.longitude
+            annotation.title = bicycle.municipality
+            annotations.append(annotation)
+        }
+        mapView.addAnnotations(annotations)
     }
     
     
