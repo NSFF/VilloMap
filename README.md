@@ -23,7 +23,7 @@ I used several tutorials to help me during this project:
 
 * Json decoding/Encoding + Codable tutorial: https://www.hackingwithswift.com/articles/119/codable-cheat-sheet
 * Solution to decoding Nested Json Files: https://stackoverflow.com/questions/71046856/codable-class-doesnt-conform-to-protocol-decodable
-* Code heavily inspired by course material "hondentoiletten" made by Johan Van Den Broek
+* Code heavily inspired by course material "hondentoiletten" and "core data demo" made by Johan Van Den Broek
 * persisting data in swift: https://iosapptemplates.com/blog/ios-development/data-persistence-ios-swift
 * Making Custom Core data with transformable: https://stackoverflow.com/questions/29825604/how-to-save-array-to-coredata
 * Date/time: https://stackoverflow.com/questions/24070450/how-to-get-the-current-time-as-datetime
