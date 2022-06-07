@@ -46,6 +46,10 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
             
             return
         }
+        // check if data is older than 15 min
+        else if (self.villoMap[0].lastLocalUpdate! + (15 * 60) >= Date()) {
+            return
+        }
         
         let url = URL(string: "https://data.mobility.brussels/geoserver/bm_bike/wfs?service=wfs&version=1.1.0&request=GetFeature&typeName=bm_bike:villo&outputFormat=json&srsName=EPSG:4326")!
         let task = URLSession.shared.dataTask(with: url) {
@@ -60,8 +64,9 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
                 }
             }
             DispatchQueue.main.async {
+                self.removeAllAnnotations()
                 self.addAnnotations()
-                //self.deleteAllLocalData()
+                self.deleteAllLocalData()
                 self.persistData()
             }
         }
@@ -139,6 +144,11 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
             annotations.append(annotation)
         }
         mapView.addAnnotations(annotations)
+    }
+    
+    func removeAllAnnotations(){
+        let allAnnotations = self.mapView.annotations
+        self.mapView.removeAnnotations(allAnnotations)
     }
     
     
