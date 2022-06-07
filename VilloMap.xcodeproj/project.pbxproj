@@ -16,7 +16,6 @@
 		BEA18BD0284BC5FC00F70A30 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEA18BCE284BC5FC00F70A30 /* LaunchScreen.storyboard */; };
 		BEA18BDB284BC5FD00F70A30 /* VilloMapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA18BDA284BC5FD00F70A30 /* VilloMapTests.swift */; };
 		BEA18BE6284BC5FD00F70A30 /* VilloMapUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA18BE5284BC5FD00F70A30 /* VilloMapUITests.swift */; };
-		BEA18C0A284E5F9D00F70A30 /* Hondentoilet.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA18C09284E5F9D00F70A30 /* Hondentoilet.swift */; };
 		BEA18C12284EA3A600F70A30 /* VilloDataStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA18C11284EA3A600F70A30 /* VilloDataStruct.swift */; };
 /* End PBXBuildFile section */
 
@@ -53,7 +52,6 @@
 		BEA18BE1284BC5FD00F70A30 /* VilloMapUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VilloMapUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEA18BE5284BC5FD00F70A30 /* VilloMapUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VilloMapUITests.swift; sourceTree = "<group>"; };
 		BEA18BE7284BC5FD00F70A30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BEA18C09284E5F9D00F70A30 /* Hondentoilet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Hondentoilet.swift; path = VilloMap/Hondentoilet.swift; sourceTree = SOURCE_ROOT; };
 		BEA18C11284EA3A600F70A30 /* VilloDataStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VilloDataStruct.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -144,7 +142,6 @@
 		BEA18BF7284BC67B00F70A30 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				BEA18C09284E5F9D00F70A30 /* Hondentoilet.swift */,
 				BEA18BC9284BC5FA00F70A30 /* VilloMap.xcdatamodeld */,
 				BEA18C11284EA3A600F70A30 /* VilloDataStruct.swift */,
 			);
@@ -303,7 +300,6 @@
 				BEA18C12284EA3A600F70A30 /* VilloDataStruct.swift in Sources */,
 				BEA18BCB284BC5FA00F70A30 /* VilloMap.xcdatamodeld in Sources */,
 				BEA18BC1284BC5FA00F70A30 /* AppDelegate.swift in Sources */,
-				BEA18C0A284E5F9D00F70A30 /* Hondentoilet.swift in Sources */,
 				BEA18BC3284BC5FA00F70A30 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

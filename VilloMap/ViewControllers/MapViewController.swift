@@ -15,7 +15,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     
     var locationManager = CLLocationManager()
     
-    var hondentoiletten:[Hondentoilet]?
+    var villoData:VilloDataStruct?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,9 +42,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
             if let jsonData = data
             {
                 do {
-                    /*self.hondentoiletten = try decoder.decode([Hondentoilet].self, from: jsonData)
-                   */
-                    let villoData = try! JSONDecoder().decode(VilloDataStruct.self, from: jsonData)
+                    self.villoData = try JSONDecoder().decode(VilloDataStruct.self, from: jsonData)
                     //self.translateData(responseData: jsonData)
                     
                 } catch {
@@ -52,7 +50,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
                 }
             }
             DispatchQueue.main.async {
-                //self.addAnnotations()
+                self.addAnnotations()
             }
         }
         task.resume()
@@ -127,12 +125,12 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     func addAnnotations() -> Void {
         var annotations = [MKAnnotation]()
 
-        for toilet in self.hondentoiletten!
+        for bicycle in self.villoData!.features
         {
             let annotation = MKPointAnnotation()
-            annotation.coordinate.latitude = toilet.coordinaat.lat
-            annotation.coordinate.longitude = toilet.coordinaat.lon
-            annotation.title = toilet.adres
+            annotation.coordinate.latitude = bicycle.geometry.coordinates[1]
+            annotation.coordinate.longitude = bicycle.geometry.coordinates[0]
+            annotation.title = bicycle.properties.mu_nl
             annotations.append(annotation)
         }
         mapView.addAnnotations(annotations)
