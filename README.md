@@ -19,6 +19,7 @@ Tested on Iphone 11
 * Persisting Data into Core Data
 * Fetching Data from Core Data if already exists
 * Updating Core data on Startup if it's more than 15 minutes old
+* Tapping Annotations pops up a little callout showing more information like the Street
 
 # Known Bugs
 
