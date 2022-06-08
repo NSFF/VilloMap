@@ -1,6 +1,6 @@
 # VilloMap
 
-This project represents an IOS Phone application where you can view Villo bicycle locations on a map interface. It retrieves the location data from https://data.mobility.brussels/nl/info/villo/ .
+This project represents an IOS Phone application where you can view OPEN Villo bicycle locations on a map interface. It fetches the Villo location data from https://data.mobility.brussels/nl/info/villo/ .
 
 # Software Used
 
