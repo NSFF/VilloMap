@@ -16,24 +16,43 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ez0-Iq-1gc">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ez0-Iq-1gc">
+                                <rect key="frame" x="0.0" y="87" width="414" height="809"/>
                             </mapView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M7W-jQ-wvd" userLabel="Refresh">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M7W-jQ-wvd" userLabel="Refresh">
                                 <rect key="frame" x="329" y="44" width="65" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="65" id="Pic-7X-YLy"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <state key="normal" title="Refresh"/>
                                 <connections>
                                     <action selector="RefreshData:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bV2-g1-EQK"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading Data..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XOE-iU-4Oq" userLabel="LastUpdate">
+                                <rect key="frame" x="20" y="52" width="301" height="23"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="XOE-iU-4Oq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="7V6-zg-MiL"/>
+                            <constraint firstItem="M7W-jQ-wvd" firstAttribute="leading" secondItem="XOE-iU-4Oq" secondAttribute="trailing" constant="8" id="Iau-GN-5ZB"/>
+                            <constraint firstItem="ez0-Iq-1gc" firstAttribute="top" secondItem="M7W-jQ-wvd" secondAttribute="bottom" constant="8" id="Onf-xo-cDT"/>
+                            <constraint firstItem="ez0-Iq-1gc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="PSb-zF-SFW"/>
+                            <constraint firstItem="XOE-iU-4Oq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="PYl-NE-tjg"/>
+                            <constraint firstItem="M7W-jQ-wvd" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="aOY-AM-0AD"/>
+                            <constraint firstItem="ez0-Iq-1gc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ds3-Pe-R1D"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="ez0-Iq-1gc" secondAttribute="bottom" constant="-34" id="gew-HV-RoN"/>
+                            <constraint firstItem="M7W-jQ-wvd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="q5i-l8-IRt"/>
+                        </constraints>
                     </view>
                     <connections>
+                        <outlet property="lastUpdateLabel" destination="XOE-iU-4Oq" id="TND-SP-Gd8"/>
                         <outlet property="mapView" destination="ez0-Iq-1gc" id="fxn-L1-nI8"/>
                     </connections>
                 </viewController>

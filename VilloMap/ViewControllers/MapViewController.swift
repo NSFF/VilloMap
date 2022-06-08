@@ -13,14 +13,13 @@ import CoreData
 class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
     
     @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var lastUpdateLabel: UILabel!
     
     var locationManager = CLLocationManager()
-    
     var villoData:VilloDataStruct?
-    
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    
     var villoMap: [VilloMap] = []
+    var refreshStatus: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,13 +40,15 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         self.fetchLocalData()
         
         // if we already have data in core, use that instead of fetching it
-        if self.villoMap.count != 0{
+        if self.villoMap.count != 0 && self.refreshStatus == 0{
+            // check if data is older than 15 min
+            if (self.villoMap[0].lastLocalUpdate! + (15 * 60) <= Date()) {
+                self.refreshStatus = 1
+                self.getDataFromWebservice()
+                return
+            }
             self.addAnnotationsFromCoreData()
-            
-            return
-        }
-        // check if data is older than 15 min
-        else if (self.villoMap[0].lastLocalUpdate! + (15 * 60) >= Date()) {
+            self.updateLastUpdateLabel()
             return
         }
         
@@ -68,6 +69,8 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
                 self.addAnnotations()
                 self.deleteAllLocalData()
                 self.persistData()
+                self.updateLastUpdateLabelWithoutCore()
+                self.refreshStatus = 0
             }
         }
         task.resume()
@@ -157,9 +160,26 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     }
     
     @IBAction func RefreshData(_ sender: Any) {
+        self.lastUpdateLabel.text = "Loading Data..."
+        self.refreshStatus = 1
         self.getDataFromWebservice()
+        
     }
     
+    // had to make this as the core persisting of the data is delayed (solution: wait for thread to be completed)
+    func updateLastUpdateLabelWithoutCore() -> Void {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd MMM HH:mm:ss"
+        
+        lastUpdateLabel.text = "Last Updated: " + dateFormatter.string(from: Date())
+    }
+    
+    func updateLastUpdateLabel() -> Void {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd MMM HH:mm:ss"
+        
+        lastUpdateLabel.text = "Last Updated: " + dateFormatter.string(from: self.villoMap[0].lastLocalUpdate!)
+    }
     
     // show user location
     func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {
