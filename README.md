@@ -28,3 +28,4 @@ I used several tutorials to help me during this project:
 * Making Custom Core data with transformable: https://stackoverflow.com/questions/29825604/how-to-save-array-to-coredata
 * Date/time: https://stackoverflow.com/questions/24070450/how-to-get-the-current-time-as-datetime
 * Core data deletion: https://www.advancedswift.com/batch-delete-everything-core-data-swift/
+* Convert date to string: https://cocoacasts.com/swift-fundamentals-how-to-convert-a-date-to-a-string-in-swift
